@@ -1,0 +1,25 @@
+<svg width="1249" height="684" viewBox="0 0 1249 684" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+<rect opacity="0.3" x="1.5" y="0.5" width="1247" height="682" stroke="#515151"/>
+<rect opacity="0.3" x="67.5" y="60.5" width="1117" height="562" stroke="#515151"/>
+<rect opacity="0.3" x="126.5" y="114.5" width="999" height="454" stroke="#515151"/>
+<rect opacity="0.3" x="174.5" y="159.5" width="900" height="368" stroke="#515151"/>
+<rect opacity="0.3" x="218.5" y="198.5" width="813" height="287" stroke="#515151"/>
+<path opacity="0.17" d="M1.5 0.5L220.5 200" stroke="white"/>
+<path opacity="0.3" d="M1248.5 0.5L1031 199.5" stroke="url(#paint0_linear_10_152)"/>
+<path opacity="0.3" d="M1248.5 682.5L1030.5 484.5" stroke="url(#paint1_linear_10_152)"/>
+<path opacity="0.3" d="M1 683L222 483.5" stroke="url(#paint2_linear_10_152)"/>
+<defs>
+<linearGradient id="paint0_linear_10_152" x1="1124.25" y1="-45" x2="1124.25" y2="274" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.75"/>
+<stop offset="1" stop-color="#515151" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_10_152" x1="1123.75" y1="727" x2="1123.75" y2="408" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.75"/>
+<stop offset="1" stop-color="#515151" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear_10_152" x1="127.467" y1="727.837" x2="127.467" y2="406.42" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.75"/>
+<stop offset="1" stop-color="#515151" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

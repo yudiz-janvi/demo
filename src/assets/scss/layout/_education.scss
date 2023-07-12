@@ -1,0 +1,247 @@
+.education-section {
+    margin: 0;
+    padding: 90px 0 0;
+    position: relative;
+    @include max-width($xl) {
+        padding: 70px 0 0px;
+    }
+    @include max-width($sm) {
+        padding: 50px 0 0px;
+    }
+    h2 {
+        margin-bottom: 50px;
+        @include max-width($md) {
+            margin-bottom: 40px;
+        }
+        @include max-width($sm) {
+            margin-bottom: 30px;
+        }
+    }
+    .plus-logo-animation {
+        bottom: 50px;
+        top: auto;
+        &.right-align {
+            bottom: auto;
+            top: 50px;
+        }
+    }
+    .education-block {
+        margin: 2px 2px 26px 2px;
+        padding: 0;
+        background: $primary;
+        border-radius: 14px;
+        position: relative;
+        min-height: calc(100% - 28px);
+        @extend .flex;
+        @include max-width($xs) {
+            flex-direction: column;
+        }
+        &:hover {
+            img {
+                transform: scale(1.08);
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: 14px;
+            background: linear-gradient(
+                to right,
+                rgba(112, 112, 112, 1) 0%,
+                rgba(29, 29, 29, 1) 60%,
+                rgba(112, 112, 112, 1) 100%
+            );
+        }
+
+        .education-img {
+            position: relative;
+            object-fit: cover;
+            object-position: center;
+            width: 31%;
+            flex-shrink: 0;
+            border-radius: 14px 0 0 14px;
+            overflow: hidden;
+            // &::before {
+            //     content: '';
+            //     padding-top: 120%;
+            // }
+            @include max-width($lg) {
+                width: 40%;
+            }
+            @include max-width($md) {
+                width: 25%;
+                min-width: 180px;
+            }
+            @include max-width($xs) {
+                width: 100%;
+                padding-top: 80%;
+                border-radius: 14px 14px 0 0;
+            }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                @extend %transition;
+            }
+        }
+        .education-detail {
+            padding: 20px;
+            h5 {
+                font-family: $primary-font-medium;
+                @include max-width($sm) {
+                    font-size: 24px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 30px;
+                margin: 0 0 10px 0;
+                @include max-width($sm) {
+                    font-size: 16px;
+                }
+            }
+            a {
+                color: $white;
+                font-family: $primary-font-medium;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.education-topic {
+    margin: 0;
+    padding: 0 0 30px 0;
+    border-bottom: solid 1px #4f4f4f;
+    li {
+        margin: 0 0 18px 0;
+        a {
+            margin: 2px;
+            padding: 24px 30px;
+            background: $primary;
+            border-radius: 14px;
+            position: relative;
+            display: block;
+            color: $white;
+            font-size: 22px;
+            font-family: $primary-font-medium;
+            @include max-width($xl) {
+                font-size: 20px;
+                padding: 20px 30px;
+            }
+            @include max-width($md) {
+                font-size: 18px;
+            }
+            @include max-width($sm) {
+                font-size: 16px;
+                padding: 16px 20px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                margin: -2px;
+                border-radius: 14px;
+                background: linear-gradient(
+                    to right,
+                    rgba(112, 112, 112, 1) 0%,
+                    rgba(29, 29, 29, 1) 60%,
+                    rgba(112, 112, 112, 1) 100%
+                );
+            }
+        }
+    }
+}
+.education-bottom-logo {
+    .plus-logo-animation {
+        bottom: -350px;
+        @include max-width($lg) {
+            bottom: -190px;
+        }
+    }
+}
+.education-detail-section {
+    position: relative;
+    .plus-logo-animation {
+        bottom: -150px;
+        top: auto;
+        @include max-width($lg) {
+            bottom: -80px;
+        }
+    }
+    .education-detail-inner {
+        margin: 0;
+        padding: 40px 0 20px;
+        border-bottom: solid 1px #4f4f4f;
+        background: $black;
+        @include max-width($sm) {
+            padding: 30px 0 10px;
+        }
+    }
+}
+
+.social-share-section {
+    margin: 50px 0 0 0;
+    h5 {
+        font-family: $primary-font-medium;
+        margin: 0 20px 0 0;
+        @include max-width($xs) {
+            margin: 0 0 15px 0;
+        }
+    }
+    ul {
+        margin: 0;
+        li {
+            padding: 0 8px;
+            a {
+                padding: 0px;
+                background: $primary;
+                border-radius: 100%;
+                position: relative;
+                width: 70px;
+                height: 70px;
+                margin: 4px;
+                @extend .flex, %align-center, %justify-center;
+                @include max-width($sm) {
+                    width: 50px;
+                    height: 50px;
+                    img {
+                        transform: scale(0.8);
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: -4px;
+                    z-index: -1;
+                    border-radius: 100%;
+                    background: linear-gradient(
+                        180deg,
+                        #5e5c5c 0%,
+                        rgba(158, 158, 158, 0.11) 100%
+                    );
+                }
+            }
+        }
+    }
+}

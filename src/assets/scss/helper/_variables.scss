@@ -1,0 +1,85 @@
+// Fonts
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('./../../fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('./../../fonts/Satoshi-Regular.woff') format('woff'),
+        url('./../../fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('./../../fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('./../../fonts/Satoshi-Medium.woff') format('woff'),
+        url('./../../fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('./../../fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('./../../fonts/Satoshi-Bold.woff') format('woff'),
+        url('./../../fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Black';
+    src: url('./../../fonts/Satoshi-Black.woff2') format('woff2'),
+        url('./../../fonts/Satoshi-Black.woff') format('woff'),
+        url('./../../fonts/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+$primary-font-regular: 'Satoshi-Regular';
+$primary-font-bold: 'Satoshi-Bold';
+$primary-font-medium: 'Satoshi-Medium';
+$primary-font-black: 'Satoshi-Black';
+
+// Color
+$primary: #1d1d1d;
+$secondary: #0085fe;
+$body-text: #cccccc;
+$light-text: #f5f5f5;
+$body-bg: #000;
+$dark-blue: #0a2d8f;
+$gray-text: #64748b;
+$gray-body-text: #989898;
+$border-color: #d0d0d0;
+$dark-border: #2f2f2f;
+$dark-gray-bg: #1c1c1c;
+$dark-gray-text: #8b8b8b;
+$menu-bg: #171b24;
+$border-light: #404b64;
+$input-bg: #fdfdfd;
+$input-border: #c8c8c8;
+$light-blue-card: #9edbe5;
+// Basic Colors
+$black: #000;
+$green: #45cd45;
+$dark-green: #208d20;
+$white: #fff;
+$danger: #f96464;
+$no-color: transparent;
+
+:root {
+    --bs-gutter-x: 24px !important;
+}
+
+// Media-Queries
+$xl: 1300px;
+$lg: 1199px;
+$md: 991px;
+$sm: 767px;
+$xs: 575px;
+$xxs: 480px;
+$xxxs: 380px;

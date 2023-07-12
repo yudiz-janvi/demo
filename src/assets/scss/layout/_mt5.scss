@@ -1,0 +1,321 @@
+.mt5-wrapper {
+    margin: 0px 0 -200px;
+    padding: 160px 0 350px;
+    background: url(../../images/livemarket-glow.svg) no-repeat center center;
+    background-size: auto 100%;
+    @include max-width($lg) {
+        padding: 150px 0 280px;
+    }
+    @include max-width($sm) {
+        padding: 110px 0 220px;
+        margin-bottom: -160px;
+    }
+    h1 {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mt-inside {
+        margin: 0 auto;
+        display: table;
+        .mt5-screen {
+            animation: mt5ScreenMove 1s ease-in-out alternate infinite;
+            position: relative;
+            margin: 70px 0 0 0;
+            @include max-width($sm) {
+                margin: 50px 0 0 0;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -35px;
+                width: 100%;
+                height: 40px;
+                background: url(../../images/screen-shadow.svg) no-repeat center
+                    center;
+                left: 0px;
+                animation: mt5ScreenShadowMove 1s ease-in-out alternate infinite;
+                background-size: 100% auto;
+                @include max-width($sm) {
+                    bottom: -25px;
+                }
+            }
+            .animation-balls {
+                @include max-width($sm) {
+                    display: none;
+                }
+                &.balls-1 {
+                    width: 14px;
+                    height: 14px;
+                    left: 3%;
+                    top: 60px;
+                }
+                &.balls-2 {
+                    width: 24px;
+                    height: 24px;
+                    right: 3%;
+                    top: 150px;
+                }
+                &.balls-3 {
+                    width: 24px;
+                    height: 24px;
+                    right: 1%;
+                    left: auto;
+                    top: 70%;
+                }
+            }
+        }
+        // .screen-shadow {
+        //     // transform-origin: left top;
+        //     animation: mt5ScreenShadowMove 1s ease-in-out alternate infinite;
+        // }
+    }
+}
+
+@keyframes mt5ScreenMove {
+    from {
+        transform: translateY(-3px);
+    }
+    to {
+        transform: translateY(3px);
+    }
+}
+@keyframes mt5ScreenShadowMove {
+    from {
+        transform: translateY(4px) scale(0.98);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(-2px) scale(1);
+        opacity: 1;
+    }
+}
+
+.download-list {
+    display: inline-block;
+    li {
+        margin: 0;
+        padding: 20px 0;
+        border-width: 2px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-style: solid;
+        border-image: linear-gradient(
+                to right,
+                rgba(32, 112, 255, 0.8) 0%,
+                rgba(32, 112, 255, 0) 100%
+            )
+            1;
+        // border-image: linear-gradient(
+        //     90deg,
+        //     rgba(32, 112, 255, 1) 0%,
+        //     rgba(32, 112, 255, 0) 100%
+        // );
+        a {
+            font-size: 24px;
+            color: $white;
+            @extend .flex, %align-center;
+            @include max-width($md) {
+                font-size: 22px;
+            }
+            @include max-width($sm) {
+                font-size: 20px;
+            }
+            &:hover {
+                color: $secondary;
+            }
+            .download-icon {
+                background: $primary;
+                border-radius: 100%;
+                position: relative;
+                width: 55px;
+                height: 55px;
+                margin: 3px 20px 3px 3px;
+                @extend .flex, %align-center, %justify-center;
+                @include max-width($sm) {
+                    width: 40px;
+                    height: 40px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: -3px;
+                    z-index: -1;
+                    border-radius: 100%;
+                    background: linear-gradient(
+                        180deg,
+                        #5e5c5c 0%,
+                        rgba(158, 158, 158, 0.11) 100%
+                    );
+                }
+                .download-inside {
+                    background-color: $white;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    @extend .flex, %align-center, %justify-center;
+                    @include max-width($sm) {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mt5-dashboard {
+    box-shadow: 0px 13.119171142578125px 39.357513427734375px 0px
+        rgba(0, 0, 0, 0.5);
+    img {
+        max-width: inherit;
+        @include max-width($md) {
+            max-width: 100%;
+        }
+    }
+    .animation-balls {
+        @include max-width($sm) {
+            display: none;
+        }
+        &.balls-1 {
+            width: 14px;
+            height: 14px;
+            left: -80px;
+            top: 80px;
+        }
+        &.balls-2 {
+            width: 28px;
+            height: 28px;
+            left: -40px;
+            top: 50%;
+        }
+        &.balls-3 {
+            width: 24px;
+            height: 24px;
+            left: -100px;
+            top: 90%;
+        }
+    }
+}
+
+.mt5app-screen {
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    animation: mt5ScreenMove 1s ease-in-out alternate infinite;
+    @include max-width($md) {
+        margin: 0 auto 50px;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -40px;
+        width: 100%;
+        height: 40px;
+        background: url(../../images/mt5-app-shadow.svg) no-repeat center center;
+        background-size: 100% auto;
+        left: 10px;
+        animation: mt5ScreenShadowMove 1s ease-in-out alternate infinite;
+    }
+    .animation-balls {
+        @include max-width($sm) {
+            display: none;
+        }
+        &.balls-1 {
+            width: 14px;
+            height: 14px;
+            right: -100px;
+            top: 30%;
+            left: auto;
+            @include max-width($lg) {
+                right: -30px;
+            }
+        }
+        &.balls-2 {
+            width: 28px;
+            height: 28px;
+            left: -40px;
+            top: 95%;
+        }
+        &.balls-3 {
+            width: 17px;
+            height: 17px;
+            right: -30px;
+            top: 60%;
+            left: auto;
+        }
+    }
+}
+
+.ready-to-join-section {
+    margin: 170px 0 0 0;
+    @include max-width($lg) {
+        margin: 120px 0 0 0;
+    }
+    @include max-width($md) {
+        margin: 80px 0 0 0;
+    }
+    @include max-width($sm) {
+        margin-top: 60px;
+    }
+    .ready-to-join-inside {
+        border: 1px solid #464545;
+        background: url(../../images/readyto-join-bg.jpg) no-repeat center
+            center;
+        background-size: cover;
+        border-radius: 22px;
+        margin: 0;
+        padding: 60px 50px;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        @extend .flex, %align-center;
+        @include max-width($md) {
+            padding: 40px 40px;
+        }
+        @include max-width($sm) {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 20px;
+        }
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            z-index: -1;
+            background: linear-gradient(
+                270deg,
+                rgba(0, 0, 0, 0.44) 0%,
+                #030303 74.42%
+            );
+        }
+        .btn-wrap {
+            flex-shrink: 0;
+            margin-left: 30px;
+            @include max-width($sm) {
+                margin: 30px 0 0;
+            }
+            .btn {
+                min-width: 180px;
+            }
+        }
+    }
+}
+
+.mt5-trade-page {
+    margin: 110px 0 0 0;
+    padding: 0;
+    iframe {
+        width: 100%;
+        height: 750px;
+    }
+}

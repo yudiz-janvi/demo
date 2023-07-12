@@ -1,0 +1,211 @@
+.account-page {
+    margin: 0;
+    position: relative;
+    padding-bottom: 84px;
+    @include max-width($lg) {
+        padding-bottom: 60px;
+    }
+    @include max-width($md) {
+        padding-bottom: 40px;
+    }
+    .account-header {
+        text-align: center;
+        max-width: 900px;
+        padding: 0px 12px;
+        margin: 0 auto;
+        h6 {
+            font-family: $primary-font-regular;
+            margin: 0 0 20px 0;
+            @include max-width($sm) {
+                margin-bottom: 10px;
+            }
+        }
+        h1 {
+            @include max-width($sm) {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            color: #a4a4a4;
+        }
+    }
+    .page-header {
+        position: relative;
+        padding: 150px 0;
+        @include max-width($lg) {
+            padding: 100px 0px;
+        }
+        @include max-width($md) {
+            padding: 40px 0px;
+            padding-top: 100px;
+        }
+        .plus-logo-animation {
+            position: absolute;
+            top: auto;
+            bottom: -10px;
+        }
+    }
+    .pricing-card {
+        padding: 30px 30px 40px;
+        @include max-width($xl) {
+            padding: 20px;
+        }
+    }
+    .row {
+        row-gap: 24px;
+        & > div {
+            p {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: -0.48px;
+                @include max-width($md) {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+            &:nth-child(1) {
+                .pricing-card {
+                    background-color: $light-blue-card;
+                    color: $black;
+                }
+            }
+            &:nth-child(2) {
+                .pricing-card {
+                    background-color: #9ee5d4;
+                }
+            }
+            &:nth-child(3) {
+                .pricing-card {
+                    background: #a7b7fc;
+                }
+            }
+            &:nth-child(4) {
+                .pricing-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: #127181;
+                    padding: 55px;
+                    .action {
+                        @include max-width($lg) {
+                            width: 100%;
+                        }
+                    }
+                    .card-heading {
+                        @include max-width($lg) {
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                    .create-account {
+                        max-width: 726px;
+                        @include max-width($xl) {
+                            padding-bottom: 20px;
+                        }
+                        h3 {
+                            color: $light-text;
+                            margin-bottom: 16px;
+                        }
+                        p {
+                            color: rgba(255, 255, 255, 0.8);
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 34px;
+                        }
+                    }
+                    .card-heading {
+                        padding: 0px;
+                        @include max-width($xl) {
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                @include max-width(1199px) {
+                    .pricing-card {
+                        flex-direction: column;
+                        padding: 20px;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .pricing-card {
+                border-radius: 22px;
+                height: 100%;
+                @include max-width($lg) {
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+                .card-heading {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    padding-bottom: 24px;
+                    @include max-width($xl) {
+                        padding-bottom: 20px;
+                    }
+                }
+                h2,
+                p {
+                    margin-bottom: 0px;
+                    color: $black;
+                }
+
+                ul {
+                    padding: 10px 0px 98px;
+                    @include max-width($xl) {
+                        padding: 10px 0px 60px;
+                    }
+                    li {
+                        color: $black;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 40px;
+                        letter-spacing: -0.4px;
+                        position: relative;
+                        padding-left: 40px;
+                        @include max-width($md) {
+                            font-size: 18px;
+                            line-height: 34px;
+                        }
+                        &::before {
+                            content: '';
+                            background: url('../../images/right-tick.svg')
+                                no-repeat center;
+                            height: 24px;
+                            width: 24px;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            @include max-width($md) {
+                                height: 22px;
+                                width: 22px;
+                            }
+                        }
+                    }
+                }
+                .action {
+                    text-align: center;
+                    button {
+                        background-color: $black;
+                        color: $white;
+                        border-color: $black;
+                    }
+                }
+                img {
+                    @include max-width($xl) {
+                        max-width: 58px;
+                    }
+                    @include max-width($md) {
+                        max-width: 46px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,232 @@
+.career-page-section {
+    margin: 0;
+    padding: 80px 0 60px;
+    position: relative;
+    @include max-width($md) {
+        padding: 60px 0 40px;
+    }
+    @include max-width($sm) {
+        padding: 50px 0 30px;
+    }
+    .plus-logo-animation {
+        z-index: 0;
+        top: 50px;
+    }
+
+    .job-info {
+        @extend .flex, %justify-between;
+        color: #5e5e5e;
+        @include max-width($lg) {
+            flex-wrap: wrap;
+        }
+        img {
+            margin-right: 5px;
+        }
+    }
+    .career-title {
+        h1 {
+            color: $black;
+            margin: 0 0 10px 0;
+            font-family: $primary-font-black;
+        }
+        p {
+            color: #313131;
+            margin: 0 0 10px;
+            font-family: $primary-font-medium;
+        }
+        h6 {
+            color: $secondary;
+            margin: 0;
+        }
+    }
+    .career-detail {
+        margin: 40px 0 20px 0;
+        h6 {
+            color: #000000;
+            font-family: $primary-font-bold;
+            margin: 0 0 15px 0;
+        }
+        ul {
+            li {
+                color: #6c6c6c;
+                font-family: $primary-font-medium;
+            }
+        }
+        .btn {
+            min-width: 150px;
+            margin-top: 40px;
+            @include max-width($md) {
+                margin-top: 20px;
+            }
+        }
+    }
+    .other-opening {
+        position: relative;
+        @include max-width($md) {
+            margin: 30px 0 30px;
+        }
+        ul {
+            li {
+                margin: 0 0 15px 0;
+                a {
+                    border-radius: 8px;
+                    border-left: 3px solid $secondary;
+                    box-shadow: 1px 1px 15px 0px #0000000d;
+                    display: block;
+                    background-color: $white;
+                    padding: 24px 24px;
+                    @include max-width($sm) {
+                        padding: 15px;
+                    }
+                    h6 {
+                        color: $black;
+                        font-size: 20px;
+                        font-family: $primary-font-bold;
+                    }
+                }
+            }
+        }
+        .job-info {
+            justify-content: flex-start;
+            font-family: $primary-font-medium;
+            & > div {
+                margin-right: 20px;
+                @include max-width($sm) {
+                    margin: 0 15px 5px 0;
+                }
+            }
+        }
+    }
+}
+.career-list {
+    margin: 0 -15px;
+    position: relative;
+    @extend .flex, %flex-wrap;
+    &.why-trade-list {
+        h6 {
+            line-height: 26px;
+            margin: 0 0 10px 0 !important;
+        }
+    }
+    .career-block {
+        margin: 0;
+        padding: 0 16px 32px;
+        width: 33.33%;
+        @include max-width($md) {
+            width: 50%;
+        }
+        @include max-width($sm) {
+            width: 100%;
+        }
+        .career-block-inside {
+            box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.05);
+            margin: 0;
+            padding: 20px;
+            border-radius: 8px;
+            display: block;
+            background: $white;
+            height: 100%;
+            @extend %transition;
+            &:hover {
+                box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.09);
+            }
+            h6 {
+                font-size: 20px;
+                color: $black;
+                margin: 0 0 5px 0;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.application-form-section {
+    margin: 0;
+    padding: 100px 0;
+    background: url(../../images/career-form-pattern.svg) repeat-x center center
+        #f6f7fa;
+    @include max-width($md) {
+        padding: 70px 0 70px;
+    }
+    @include max-width($sm) {
+        padding: 60px 0 60px;
+    }
+}
+.form-card {
+    background: $white;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0px 0px 50px 0px #f1f5ff;
+    border-radius: 14px;
+    border-bottom: 4px solid #0085fe;
+    @include max-width($sm) {
+        padding: 20px;
+    }
+    h6 {
+        color: $black;
+        font-family: $primary-font-bold;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+    .form-btn {
+        text-align: center;
+        .btn {
+            min-width: 180px;
+        }
+    }
+    .fileupload {
+        margin: 0;
+        padding: 40px 20px;
+        background: $input-bg;
+        text-align: center;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='14' ry='14' stroke='%23C8C8C8FF' stroke-width='2' stroke-dasharray='8%2c 10' stroke-dashoffset='5' stroke-linecap='round'/%3e%3c/svg%3e");
+        border-radius: 14px;
+        position: relative;
+        min-height: 125px;
+        @extend .flex, %align-center, %justify-center;
+        span {
+            color: #989898;
+        }
+        input {
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    }
+}
+
+.why-trade-section {
+    position: relative;
+    margin: 0;
+    padding: 60px 0 100px;
+    @include max-width($lg) {
+        padding: 60px 0 60px;
+    }
+    @include max-width($md) {
+        padding: 20px 0 60px;
+    }
+    @include max-width($sm) {
+        padding: 20px 0 30px;
+    }
+    .plus-logo-animation {
+        z-index: 0;
+        top: auto;
+        bottom: -70px;
+        &.right-align {
+            bottom: auto;
+            top: -21%;
+            @include max-width($lg) {
+                top: -10%;
+            }
+            @include max-width($sm) {
+                top: -5%;
+            }
+        }
+    }
+}

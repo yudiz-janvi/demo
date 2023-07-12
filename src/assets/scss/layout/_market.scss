@@ -1,0 +1,613 @@
+.page-navigation {
+    margin: 15px auto 60px;
+    padding: 25px 40px;
+    display: inline-block;
+    border-radius: 80px;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+        86deg,
+        rgba(19, 19, 19, 0.39) 0%,
+        rgba(94, 94, 94, 0.43) 100%
+    );
+    backdrop-filter: blur(12px);
+    @include max-width($sm) {
+        margin-bottom: 30px;
+        padding: 15px 20px;
+    }
+    ul {
+        @extend .flex;
+        li {
+            margin: 0;
+            padding: 0 15px;
+            a {
+                font-size: 18px;
+                font-family: $primary-font-regular;
+                color: #bdbdbd;
+                position: relative;
+                padding: 10px 5px;
+                letter-spacing: 0.02em;
+                &::after {
+                    content: '';
+                    width: 0;
+                    bottom: 0;
+                    left: 50%;
+                    height: 2px;
+                    background-color: $white;
+                    position: absolute;
+                    @extend %transition;
+                }
+                &:hover,
+                &.active {
+                    color: $white;
+                    font-family: $primary-font-medium;
+                    &::after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown {
+        .btn-custom {
+            background: $white;
+            color: $primary;
+            padding: 10px 30px !important;
+            min-width: 180px;
+            &::after {
+                margin-left: 10px;
+            }
+        }
+    }
+    .dropdown-menu {
+        margin: 0;
+        z-index: 5;
+        width: 100%;
+        border-radius: 15px;
+        background: $menu-bg;
+        a {
+            display: block;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 16px;
+            font-family: $primary-font-medium;
+            color: $white;
+            border-radius: 14px;
+            &.active {
+                background-color: #2d3f6a;
+            }
+        }
+    }
+}
+
+.twocolumn-section {
+    margin: 50px 0 0;
+    padding: 50px 0 0 0;
+    position: relative;
+    @include max-width($sm) {
+        padding: 0;
+    }
+    &.mt5-desktopapp {
+        padding-top: 80px;
+        margin: 0 0 200px;
+        @include max-width($lg) {
+            margin: 0 0 100px;
+        }
+        @include max-width($md) {
+            padding-top: 0;
+        }
+        .plus-logo-animation {
+            bottom: auto;
+            top: 80px;
+        }
+        .pattern-animation {
+            @include max-width($md) {
+                width: 45vw;
+                height: 50%;
+            }
+            @include max-width($sm) {
+                width: 50vw;
+                // height: 40%;
+            }
+            @include max-width($xs) {
+                // width: 50vw;
+                height: 40%;
+            }
+            @include max-width($xxxs) {
+                // width: 50vw;
+                height: 30%;
+            }
+        }
+    }
+    &.mt5mobileapp {
+        .plus-logo-animation.right-align {
+            top: 35%;
+            bottom: auto;
+        }
+        .pattern-animation {
+            @include max-width($xxs) {
+                // width: 50vw;
+                height: 47%;
+            }
+            @include max-width($xxxs) {
+                height: 40%;
+            }
+        }
+    }
+    .plus-logo-animation {
+        top: auto;
+        bottom: -20%;
+        @include max-width($sm) {
+            bottom: -5%;
+        }
+    }
+    .twocolumn-inner {
+        .twocolumn-left {
+            padding-right: 50px;
+            @include max-width($md) {
+                padding-bottom: 20px;
+                padding-right: 12px;
+            }
+        }
+        .market-trade {
+            .market-trade-row {
+                position: relative;
+                z-index: 1;
+                @extend .flex, %align-center;
+                @include max-width($sm) {
+                    flex-direction: column;
+                }
+                &.traderow-2 {
+                    margin-top: -70px;
+                    position: relative;
+                    z-index: 0;
+                    @include max-width($sm) {
+                        margin: 30px 0 0;
+                    }
+                    .trade-block {
+                        margin-right: 0;
+                        margin-left: 25px;
+                        margin-top: -30px;
+                        min-width: 230px;
+                        @include max-width($lg) {
+                            min-width: 180px;
+                            margin-left: 20px;
+                        }
+                        @include max-width($sm) {
+                            margin: 30px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+        .chart-block {
+            margin: 0;
+            padding: 20px;
+            background: $white;
+            border-radius: 24px;
+            box-shadow: 0px 14px 22px rgba(0, 0, 0, 0.1);
+            width: 64%;
+            @include max-width($md) {
+                width: 75%;
+            }
+            @include max-width($sm) {
+                width: 100%;
+            }
+            .chart-header {
+                @extend .flex, %align-center;
+                .icon {
+                    margin-right: 10px;
+                    max-width: 50px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                }
+                p {
+                    color: $black;
+                    font-family: $primary-font-medium;
+                    margin: 0;
+                    line-height: 26px;
+                    span {
+                        color: #9f9f9f;
+                        font-family: $primary-font-regular;
+                        display: block;
+                        font-size: 16px;
+                    }
+                }
+            }
+            label {
+                display: none;
+            }
+            select {
+                display: none;
+            }
+            .chart-price {
+                margin: 15px 0 10px;
+                padding: 0;
+                @extend .flex, %justify-between;
+                h5 {
+                    font-size: 26px;
+                    margin: 0;
+                    color: $primary;
+                    @include max-width($lg) {
+                        font-size: 24px;
+                    }
+                }
+                p {
+                    margin: 0;
+                    font-family: $primary-font-bold;
+                    span {
+                        font-family: $primary-font-regular;
+                    }
+                }
+            }
+        }
+        .trade-block {
+            border-radius: 14px;
+            background-color: $primary;
+            padding: 15px;
+            min-width: 197px;
+            margin: 0 25px 0 50px;
+            flex-shrink: 0;
+            @extend .flex, %align-center;
+            @include max-width($lg) {
+                margin: 0 20px 0 0;
+                min-width: 150px;
+            }
+            @include max-width($sm) {
+                width: auto;
+                min-width: 180px;
+                margin: 0 0 30px 0;
+            }
+            .company-logo {
+                margin: 0 15px 0 0;
+                width: 70px;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                @include max-width($lg) {
+                    width: 60px;
+                }
+                &::after {
+                    padding-top: 100%;
+                    content: '';
+                    float: left;
+                }
+                img {
+                    position: absolute;
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                color: $white;
+                font-family: $primary-font-medium;
+                @include max-width($lg) {
+                    font-size: 18px;
+                }
+                &.stock-per {
+                    font-family: $primary-font-bold;
+                    font-size: 24px;
+                    @include max-width($lg) {
+                        font-size: 22px;
+                    }
+                    sub {
+                        font-size: 16px;
+                        line-height: normal;
+                        top: -1px;
+                        font-family: $primary-font-medium;
+                        @include max-width($lg) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .arrow {
+                    width: 0;
+                    height: 0;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 8px solid #eb4e4e;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 13px;
+                    margin-left: 10px;
+                    @include max-width($sm) {
+                        margin-top: 10px;
+                    }
+                    &.down {
+                        border-top-color: #eb4e4e;
+                    }
+                    &.up {
+                        border-top-color: #208d20;
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LIVE MARKET CSS START
+.live-market-section {
+    margin: -100px 0 -80px;
+    padding: 330px 0 350px;
+    // background: url(../../images/livemarket-glow.svg) no-repeat center center;
+    // background-size: auto 100%;
+
+    .table-title {
+        padding-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        @include max-width($md) {
+            padding-bottom: 40px;
+        }
+        @include max-width($sm) {
+            padding-bottom: 20px;
+        }
+        h2 {
+            @include max-width($sm) {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    @include max-width($lg) {
+        padding: 250px 0 230px;
+    }
+    @include max-width($lg) {
+        margin-bottom: -110px;
+    }
+    @include max-width($sm) {
+        padding: 170px 0 180px;
+        background-size: 800px 630px;
+    }
+    .glow-bg {
+    }
+    .saturn-video {
+        position: absolute;
+        top: -40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 700px;
+        padding: 12px;
+        // height: 100%;
+        @include max-width($md) {
+            // top: -75px;
+        }
+        @include max-width($sm) {
+            top: -30%;
+        }
+        @include max-width($xs) {
+        }
+        @include max-width($xxxs) {
+        }
+    }
+    .livemarket-line {
+        position: absolute;
+        left: 0;
+        top: 30px;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        @include max-width($md) {
+            display: none;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        // width: 100%;
+        // height: 105%;
+        // background: url(../../images/livemarket-pattern-1.svg) no-repeat center
+        //     center;
+        // background-size: 100% 100%;
+        // img {
+        //     display: none;
+        // }
+    }
+    .parallax {
+        overflow: visible !important;
+    }
+    .parallax-inside {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include max-width($xl) {
+            left: -80px;
+            width: calc(100% + 160px);
+        }
+        @include max-width($md) {
+            display: none;
+        }
+    }
+    .livemarket-animation {
+        .currency-icon {
+            top: 0;
+            left: 0;
+            box-sizing: content-box;
+            position: absolute;
+            // transform: skew(12deg, 12deg);
+            transform: skew(30deg, 0deg) rotateX(-30deg);
+            animation: MoveCurrencyIcon 1.5s ease-in-out infinite forwards;
+            @include max-width($lg) {
+                transform: skew(12deg, 12deg) scale(0.8);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: -3%;
+                z-index: -1;
+                border-radius: 100%;
+                background: linear-gradient(
+                    180deg,
+                    #808080 0%,
+                    rgba(158, 158, 158, 0.11) 100%
+                );
+            }
+            &.icon-1 {
+                left: 10%;
+                top: 28%;
+                max-width: 90px;
+                @include max-width($lg) {
+                    left: 9%;
+                }
+            }
+            &.icon-2 {
+                left: 10%;
+                top: 70%;
+                transform: skew(-22deg, -6deg) rotateX(30deg) scale(1.1);
+                animation-delay: 0.5s;
+                max-width: 85px;
+                @include max-width($lg) {
+                    left: 9%;
+                    transform: skew(-22deg, -6deg) rotateX(30deg) scale(0.8);
+                }
+            }
+            &.icon-3 {
+                left: 81%;
+                top: 32%;
+                transform: skew(-30deg, 0deg) rotateX(321deg);
+                animation-delay: 0.4s;
+                max-width: 85px;
+                @include max-width($lg) {
+                    left: 82.5%;
+                    transform: skew(-30deg, 0deg) rotateX(321deg) scale(0.8);
+                }
+            }
+            &.icon-4 {
+                left: 82%;
+                top: 78%;
+                transform: skew(40deg, 0deg) scaleY(0.7);
+                max-width: 85px;
+                @include max-width($lg) {
+                    left: 82%;
+                    transform: skew(12deg, 12deg) scale(0.65);
+                }
+            }
+            .currency-icon-inner {
+                background: #1c1c1c;
+                padding: 10px;
+                border-radius: 100%;
+            }
+            img {
+                border-radius: 100%;
+            }
+        }
+        .animation-balls {
+            background: linear-gradient(
+                180deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: MoveCurrencyIcon2 1.5s ease-in-out infinite forwards;
+            &.balls-1 {
+                top: 43%;
+                left: 8%;
+            }
+            &.balls-2 {
+                top: 60%;
+                left: 16%;
+                transform: scale(0.5);
+                animation-delay: 0.6s;
+            }
+            &.balls-3 {
+                top: 28%;
+                left: 79%;
+                @include max-width($lg) {
+                    left: 83%;
+                }
+            }
+            &.balls-4 {
+                top: 67%;
+                left: 79%;
+                animation-delay: 0.5s;
+                @include max-width($lg) {
+                    left: 82%;
+                }
+            }
+        }
+    }
+    .live-market-inside {
+        // margin: 70px 0 0 0;
+        padding: 0;
+        // background: url(../../images/livemarket-pattern-1.svg) no-repeat center center;
+        @include max-width($sm) {
+            margin: 40px 0 0 0;
+        }
+        .live-market-table {
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 20px;
+            background: rgba($black, 0.75);
+            overflow: hidden;
+            backdrop-filter: blur(42px);
+            border: solid 1px rgba(255, 255, 255, 0.1);
+            .table {
+                border-color: rgba(255, 255, 255, 0.1);
+                & > :not(caption) > * > * {
+                    background-color: transparent;
+                }
+                th {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    #mouse-parallax-container {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 125vh;
+            min-height: 1100px;
+            top: -40%;
+            left: 0;
+            z-index: -1;
+            background: url(../../images/table-bg-gradient.svg) no-repeat center;
+            background-size: 100% 100%;
+            pointer-events: none;
+        }
+    }
+}
+
+@keyframes MoveCurrencyIcon {
+    0% {
+        margin-top: -3px;
+    }
+    50% {
+        margin-top: 3px;
+    }
+    100% {
+        margin-top: -3px;
+    }
+}
+
+@keyframes MoveCurrencyIcon2 {
+    0% {
+        margin-top: -2px;
+    }
+    50% {
+        margin-top: 2px;
+    }
+    100% {
+        margin-top: -2px;
+    }
+}

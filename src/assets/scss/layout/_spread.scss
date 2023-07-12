@@ -1,0 +1,121 @@
+.spread-page-section {
+    margin: 0;
+    padding: 100px 0 50px;
+    background: url(../../images/pattern-2.svg) repeat center center;
+    position: relative;
+    @include max-width($lg) {
+        padding: 80px 0 40px;
+    }
+    @include max-width($md) {
+        padding: 60px 0 40px;
+    }
+    @include max-width($sm) {
+        padding: 50px 0 20px;
+    }
+    & > .plus-logo-animation {
+        top: auto;
+        bottom: -5%;
+        @include max-width($lg) {
+            bottom: -2%;
+        }
+    }
+    .spread-section-1 {
+        margin: 0 0 50px 0;
+        @include max-width($md) {
+            margin: 0 0 30px 0;
+        }
+
+        .plus-logo-animation {
+            top: 50px;
+            // max-height: 280px;
+        }
+        .spread-section-inner {
+            margin: 50px -12px 0;
+            padding: 0;
+            @extend .flex, %flex-wrap;
+            @include max-width($sm) {
+                margin: 30px -12px 0;
+            }
+            .spread-section-block-wrap {
+                padding: 0 12px 24px;
+                flex-basis: 33.33%;
+                flex-grow: 1;
+                @include max-width($sm) {
+                    flex-basis: 100%;
+                }
+                .spread-section-block {
+                    margin: 2px;
+                    padding: 20px;
+                    background: $primary;
+                    position: relative;
+                    border-radius: 14px;
+                    height: calc(100% - 4px);
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: -2px;
+                        z-index: -1;
+                        border-radius: 14px;
+                        background: linear-gradient(
+                            180deg,
+                            #808080 0%,
+                            rgba(158, 158, 158, 0.11) 100%
+                        );
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .spread-block-wrap {
+        margin: 0 0 50px 0;
+        padding: 0;
+        position: relative;
+        .plus-logo-animation {
+            // max-height: 280px;
+            &.right-align {
+                top: auto;
+                bottom: -50%;
+            }
+        }
+        .spread-block-2 {
+            background: #171717;
+            border-top: solid 2px #4f4f4f;
+            border-bottom: solid 2px #4f4f4f;
+            border-radius: 14px;
+            margin: 0;
+            padding: 30px 20px;
+        }
+    }
+}
+.formula-list {
+    margin-top: 20px;
+    ul {
+        li {
+            background: #171717;
+            border: solid 1px #4f4f4f;
+            margin: 0;
+            padding: 25px 25px;
+            font-size: 20px;
+            @include max-width($md) {
+                font-size: 18px;
+            }
+            @include max-width($sm) {
+                font-size: 16px;
+                padding: 20px 20px;
+            }
+            &:first-child {
+                border-radius: 20px 20px 0px 0px;
+            }
+            &:last-child {
+                border-radius: 0 0 20px 20px;
+            }
+        }
+    }
+}

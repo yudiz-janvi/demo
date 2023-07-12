@@ -1,0 +1,27 @@
+// BootStrap :BEGIN
+
+@import '~bootstrap/scss/bootstrap';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '~aos/dist/aos.css';
+
+// HELPER :BEGIN
+@import 'helper/variables';
+@import 'helper/extend';
+@import 'helper/mixin';
+@import 'helper/default';
+
+// LAYOUT :BEGIN
+@import 'layout/header';
+@import 'layout/footer';
+
+// PAGES :BEGIN
+@import 'layout/home';
+@import 'layout/market';
+@import 'layout/education';
+@import 'layout/mt5';
+@import 'layout/about-us';
+@import 'layout/career';
+@import 'layout/contact-us';
+@import 'layout/spread';
+@import 'layout/account';
