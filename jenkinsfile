@@ -6,7 +6,7 @@ pipeline{
                 echo 'this is first stage'
             }
         }
-        stagetage("STAGE2"){
+        stage("STAGE2"){
             steps{
                 sh '''pwd
                 ls
