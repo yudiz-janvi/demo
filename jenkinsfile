@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    stages{
+        stage("STAGE1"){
+            steps{
+                echo 'this is first stage'
+            }
+        }
+        stagetage("STAGE2"){
+            steps{
+                sh '''pwd
+                ls
+                '''
+            }
+        }
+    }
+    post{
+        always{
+            echo "========always========"
+        }
+        success{
+            echo "========pipeline executed successfully ========"
+        }
+        failure{
+            echo "========pipeline execution failed========"
+        }
+    }
+}
