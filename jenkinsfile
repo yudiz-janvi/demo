@@ -8,9 +8,7 @@ pipeline{
         }
         stage("STAGE2"){
             steps{
-                sh '''pwd
-                ls
-                '''
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/home/ubuntu', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
             }
         }
     }
